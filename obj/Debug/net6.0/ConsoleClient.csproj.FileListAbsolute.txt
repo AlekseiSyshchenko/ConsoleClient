@@ -1,0 +1,15 @@
+/home/cc/code/csh/ConsoleClient/bin/Debug/net6.0/ConsoleClient
+/home/cc/code/csh/ConsoleClient/bin/Debug/net6.0/ConsoleClient.deps.json
+/home/cc/code/csh/ConsoleClient/bin/Debug/net6.0/ConsoleClient.runtimeconfig.json
+/home/cc/code/csh/ConsoleClient/bin/Debug/net6.0/ConsoleClient.dll
+/home/cc/code/csh/ConsoleClient/bin/Debug/net6.0/ConsoleClient.pdb
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.csproj.AssemblyReference.cache
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.GeneratedMSBuildEditorConfig.editorconfig
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.AssemblyInfoInputs.cache
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.AssemblyInfo.cs
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.csproj.CoreCompileInputs.cache
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.dll
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/refint/ConsoleClient.dll
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.pdb
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ConsoleClient.genruntimeconfig.cache
+/home/cc/code/csh/ConsoleClient/obj/Debug/net6.0/ref/ConsoleClient.dll
