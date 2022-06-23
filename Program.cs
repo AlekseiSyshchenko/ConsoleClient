@@ -5,34 +5,41 @@ namespace ConsoleClient
 {
     class Program
     {
+        const string ip = "87.250.250.242";
         static void Main(string[] args)
         {
             
-            Console.Write("Enter ip address (for exit enter q): ");
-            int port = 80;
-            string server = Console.ReadLine();
-            while (server != "q" && server != "Q")
-            {
+            
+               int closedPort = 0; 
+
+                
+                
+                   //String fileName = $"report{server}.csv";
+                   FileInfo fileInfo = new FileInfo(@$"report{ip}.csv");
+                   StreamWriter report = fileInfo.CreateText();
+                
+                
                 try
                 {
+                   
                    TcpClient client = new TcpClient();
-                   client.Connect(server, port); 
-                   Console.WriteLine("Connection establised");
-                   client.Close();
-                   Console.WriteLine("Connection closed");
-                   Console.WriteLine();
+                   for(int port = 1; port <= 65535; port++)
+                   {
+                        closedPort = port;
+                        client.Connect(ip, port); 
+                        report.WriteLine($"{DateTime.Now}, {ip}, {port}, Open");
+                        client.Close();
+                   }
+                   
                 }
                 catch (SocketException e)
                 {
-                    Console.WriteLine("SocketException: {0}", e);
+                    
+                    report.WriteLine($"{DateTime.Now}, {ip}, {closedPort}, Close");
+                    //Console.WriteLine("SocketException: {0}", e);
                 }
-
-                
-                Console.Write("Enter ip address for new connection (or q): ");
-                server = Console.ReadLine();
-                //comment
-        
-            }
         }
     }
 }
+    
+
