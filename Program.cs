@@ -15,8 +15,9 @@ namespace ConsoleClient
                 
                 
                    //String fileName = $"report{server}.csv";
-                   FileInfo fileInfo = new FileInfo(@$"report{ip}.csv");
-                   StreamWriter report = fileInfo.CreateText();
+                   //FileInfo fileInfo = new FileInfo(@$"report{ip}.csv");
+                   //StreamWriter report = fileInfo.CreateText();
+                   File.Create($"report{ip}.csv");
                 
                 
                 try
@@ -27,15 +28,16 @@ namespace ConsoleClient
                    {
                         closedPort = port;
                         client.Connect(ip, port); 
-                        report.WriteLine($"{DateTime.Now}, {ip}, {port}, Open");
+                        //report.WriteLine($"{DateTime.Now}, {ip}, {port}, Open");
+                        File.WriteAllText($"report{ip}.csv", $"{DateTime.Now}, {ip}, {port}, Open");
                         client.Close();
                    }
                    
                 }
                 catch (SocketException e)
                 {
-                    
-                    report.WriteLine($"{DateTime.Now}, {ip}, {closedPort}, Close");
+                    File.WriteAllText($"report{ip}.csv", $"{DateTime.Now}, {ip}, {closedPort}, Close");
+                    //report.WriteLine($"{DateTime.Now}, {ip}, {closedPort}, Close");
                     //Console.WriteLine("SocketException: {0}", e);
                 }
         }
