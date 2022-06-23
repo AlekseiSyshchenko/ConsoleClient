@@ -30,6 +30,7 @@ namespace ConsoleClient
                 
                 Console.Write("Enter ip address for new connection (or q): ");
                 server = Console.ReadLine();
+                //comment
         
             }
         }
