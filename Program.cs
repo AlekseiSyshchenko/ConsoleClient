@@ -12,7 +12,7 @@ namespace ConsoleClient
 
             int closedPort = 0;
             string path = @"c:\report.csv";
-            System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+            StreamWriter file = new StreamWriter(path, true);
 
             TcpClient client = new TcpClient();
             for (int port = 1; port <= 10; port++)
@@ -38,6 +38,7 @@ namespace ConsoleClient
 
                 }
             }
+            file.Close();
         }
     }
 }
