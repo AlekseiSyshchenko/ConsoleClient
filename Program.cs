@@ -14,7 +14,7 @@ namespace ConsoleClient
             StreamWriter file = new StreamWriter(Settings.path, true);
 
             TcpClient client = new TcpClient();
-            for (int port = 1; port <= 100; port++)
+            for (int port = 1; port <= 5; port++)
             {
 
                 try
