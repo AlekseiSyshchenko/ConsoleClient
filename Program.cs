@@ -14,29 +14,29 @@ namespace ConsoleClient
             string path = @"c:\report.csv";
             System.IO.StreamWriter file = new System.IO.StreamWriter(path);
 
-            try
+            TcpClient client = new TcpClient();
+            for (int port = 1; port <= 10; port++)
             {
 
-                TcpClient client = new TcpClient();
-
-                for (int port = 1; port <= 65535; port++)
+                try
                 {
-                    Console.WriteLine($"Я в цикле {port}");
+
+
                     closedPort = port;
                     client.Connect(ip, port);
-                    Console.WriteLine("Open");
+                    Console.WriteLine($"{port} Open");
                     file.WriteLine($"{DateTime.Now}, {ip}, {port}, Open");
                     client.Close();
+
                 }
 
-            }
+                catch (SocketException e)
+                {
 
-            catch (SocketException e)
-            {
-                Console.WriteLine($"Я в catch {closedPort}");
-                Console.WriteLine("Close");
-                file.WriteLine($"{DateTime.Now}, {ip}, {closedPort}, Close");
+                    Console.WriteLine($"{port} Close");
+                    file.WriteLine($"{DateTime.Now}, {ip}, {closedPort}, Close");
 
+                }
             }
         }
     }
