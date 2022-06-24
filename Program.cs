@@ -5,7 +5,7 @@ namespace ConsoleClient
 {
     class Program
     {
-        const string ip = "87.250.250.242";
+        
         static void Main(string[] args)
         {
 
@@ -23,9 +23,9 @@ namespace ConsoleClient
 
 
                     closedPort = port;
-                    client.Connect(ip, port);
+                    client.Connect(Settings.ip, port);
                     Console.WriteLine($"{port} Open");
-                    file.WriteLine($"{DateTime.Now}, {ip}, {port}, Open");
+                    file.WriteLine($"{DateTime.Now}, {Settings.ip}, {port}, Open");
                     client.Close();
 
                 }
@@ -34,7 +34,7 @@ namespace ConsoleClient
                 {
 
                     Console.WriteLine($"{port} Close");
-                    file.WriteLine($"{DateTime.Now}, {ip}, {closedPort}, Close");
+                    file.WriteLine($"{DateTime.Now}, {Settings.ip}, {closedPort}, Close");
 
                 }
             }
