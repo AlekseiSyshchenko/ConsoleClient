@@ -11,11 +11,10 @@ namespace ConsoleClient
 
 
             int closedPort = 0;
-            string path = @"c:\report.csv";
-            StreamWriter file = new StreamWriter(path, true);
+            StreamWriter file = new StreamWriter(Settings.path, true);
 
             TcpClient client = new TcpClient();
-            for (int port = 1; port <= 10; port++)
+            for (int port = 1; port <= 100; port++)
             {
 
                 try
