@@ -8,24 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/cc/.nuget/packages/": {}
+    "C:\\Users\\cc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cc/code/csh/ConsoleClient/ConsoleClient.csproj",
+      "projectUniqueName": "C:\\Users\\cc\\source\\repos\\ConsoleClient\\ConsoleClient.csproj",
       "projectName": "ConsoleClient",
-      "projectPath": "/home/cc/code/csh/ConsoleClient/ConsoleClient.csproj",
-      "packagesPath": "/home/cc/.nuget/packages/",
-      "outputPath": "/home/cc/code/csh/ConsoleClient/obj/",
+      "projectPath": "C:\\Users\\cc\\source\\repos\\ConsoleClient\\ConsoleClient.csproj",
+      "packagesPath": "C:\\Users\\cc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cc\\source\\repos\\ConsoleClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/cc/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\cc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -58,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

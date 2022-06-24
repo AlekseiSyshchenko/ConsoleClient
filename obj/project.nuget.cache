@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ejiOkynd8VxfQJ7VJ/0Z7QV4ldAjc+JlTDtPorZSfrSi5EGYuT+ypx4LlUBkTIIo7//tsAuEfXBpCT/gmrtLng==",
+  "dgSpecHash": "B+sRIUwGmX4XzccdB1rBvKrEXjfFrFl7V3Okv3c++VqZzoUyMFJvlNYxAzy8vDvywgYgUhz2AZv/OJohntYckw==",
   "success": true,
-  "projectFilePath": "/home/cc/code/csh/ConsoleClient/ConsoleClient.csproj",
+  "projectFilePath": "C:\\Users\\cc\\source\\repos\\ConsoleClient\\ConsoleClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
