@@ -10,34 +10,20 @@ namespace ConsoleClient
         {
 
 
-            int closedPort = 0;
-            StreamWriter file = new StreamWriter(Settings.path, true);
+            
+            
+            FileService fileService = new FileService();
+            StreamWriter file = fileService.File;
 
-            TcpClient client = new TcpClient();
-            for (int port = 1; port <= 65535; port++)
-            {
+            NetService netService = new NetService();
+            TcpClient client = netService.Client;
 
-                try
-                {
+            Scanner scanner = new Scanner(ref file, ref client);
+            scanner.Scan();
+
+            fileService.Close();
 
 
-                    closedPort = port;
-                    client.Connect(Settings.ip, port);
-                    Console.WriteLine($"{port} Open");
-                    file.WriteLine($"{DateTime.Now}, {Settings.ip}, {port}, Open");
-                    client.Close();
-
-                }
-
-                catch (SocketException e)
-                {
-
-                    Console.WriteLine($"{port} Close");
-                    file.WriteLine($"{DateTime.Now}, {Settings.ip}, {closedPort}, Close");
-
-                }
-            }
-            file.Close();
         }
     }
 }
