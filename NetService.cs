@@ -6,8 +6,10 @@ namespace ConsoleClient
 {
     internal class NetService
     {
-        private TcpClient client = new TcpClient();
-        public TcpClient Client { get; }
-
+        public static TcpClient getClient()
+        {
+            TcpClient client = new TcpClient();
+            return client;
+        }
     }
 }

@@ -5,8 +5,15 @@ namespace ConsoleClient
 {
     internal class FileService
     {
-        private StreamWriter file = new StreamWriter(Settings.path, true);
-        public StreamWriter File { get; }
-        public void Close() => file.Close();
+        public static StreamWriter getFile()
+        {
+            StreamWriter file = new StreamWriter(Settings.path, true);
+            return file;
+        }
+
+        
+
     }
 }
+
+

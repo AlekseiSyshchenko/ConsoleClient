@@ -12,7 +12,7 @@ namespace ConsoleClient
         StreamWriter file;
         TcpClient client;
 
-        public Scanner(ref StreamWriter file, ref TcpClient client)
+        public Scanner(StreamWriter file, TcpClient client)
         {
             this.file = file;
             this.client = client;
@@ -43,6 +43,8 @@ namespace ConsoleClient
 
                 }
             }
+
+            file.Close();
         }
     }
 }

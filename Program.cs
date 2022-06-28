@@ -12,16 +12,14 @@ namespace ConsoleClient
 
             
             
-            FileService fileService = new FileService();
-            StreamWriter file = fileService.File;
+            //FileService fileService = new FileService();
+            StreamWriter file = FileService.getFile();
 
-            NetService netService = new NetService();
-            TcpClient client = netService.Client;
+            //NetService netService = new NetService();
+            TcpClient client = NetService.getClient();
 
-            Scanner scanner = new Scanner(ref file, ref client);
+            Scanner scanner = new Scanner(file, client);
             scanner.Scan();
-
-            fileService.Close();
 
 
         }
