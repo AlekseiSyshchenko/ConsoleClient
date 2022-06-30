@@ -4,12 +4,45 @@ using System.Net.Sockets;
 
 namespace ConsoleClient
 {
-    internal class NetService
+    class NetService
     {
-        public static TcpClient getClient()
+
+
+
+        public static void ScanPort()
         {
-            TcpClient client = new TcpClient();
-            return client;
+            int closedPort = 0;
+            using (FileService fileService = new FileService())
+            using (TcpClient client = new TcpClient())
+            {
+
+                for (int port = 1; port <= 5; port++)
+                {
+
+                    try
+                    {
+
+
+                        closedPort = port;
+                        client.Connect(Settings.ip, port);
+                        Console.WriteLine($"{port} Open");
+                        fileService.WriteOpen(port);
+                        client.Close();
+
+                    }
+
+                    catch (SocketException e)
+                    {
+
+                        Console.WriteLine($"{port} Close");
+                        fileService.WriteClose(closedPort);
+
+                    }
+
+                }
+
+                fileService.CloseFile();
+            }
         }
     }
 }
